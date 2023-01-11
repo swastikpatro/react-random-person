@@ -174,7 +174,7 @@ p {
   text-align: center;
   padding: 1.5rem;
   box-shadow: var(--dark-shadow);
-  margin-top: -550px;
+  margin-top: -570px;
   /* margin-top: -200px; */
 }
 
@@ -208,7 +208,12 @@ p {
 }
 .user-value {
   color: var(--clr-grey-1);
-  font-size: 28px;
+  font-size: 18px;
+  text-align: center;
+  max-width: 100%;
+  /* border: 2px solid red; */
+  margin-top: 0.5rem;
+  overflow: auto;
 }
 .values-list {
   display: grid;
@@ -279,6 +284,7 @@ p {
 
 @media screen and (min-width: 800px) {
   .user-value {
+    margin-top: 0;
     font-size: 38px;
   }
   .icon {
