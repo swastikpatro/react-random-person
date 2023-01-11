@@ -2,7 +2,7 @@
 
 Fetches random person data from the API and displays it using tanstack query v4.
 
-[Live Link](https://react-random-person-theta.vercel.app/)![icons8-lucky-wheel-96](https://user-images.githubusercontent.com/113245457/211896803-88315b20-8fe1-4f5b-86de-50a777fe2511.png)
+[Live Link](https://react-random-person-theta.vercel.app/)
 
 ## DEMO ▶
 
