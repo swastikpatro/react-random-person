@@ -169,12 +169,13 @@ p {
   max-width: 730px;
   background: var(--clr-white);
   margin: 0 auto;
-  margin-top: -200px;
   border-radius: var(--radius);
   position: relative;
   text-align: center;
   padding: 1.5rem;
   box-shadow: var(--dark-shadow);
+  margin-top: -550px;
+  /* margin-top: -200px; */
 }
 
 .container::before {
@@ -197,7 +198,7 @@ p {
   padding: 5px;
   background: var(--clr-white);
   border: 1px solid rgba(0, 0, 0, 0.25);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   box-shadow: var(--dark-shadow);
 }
 
@@ -222,15 +223,58 @@ p {
   color: var(--clr-grey-5);
   transition: var(--transition);
 }
-.icon:hover {
-  color: var(--clr-primary-5);
-}
 .active {
   color: var(--clr-primary-5);
+}
+
+.icon.active {
+  cursor: default;
+  transform: scale(1.15);
+}
+.icon:not(.active):hover {
+  color: var(--clr-primary-2);
+  transform: scale(0.8);
 }
 .btn {
   margin: 0 auto;
   margin-top: 1.5rem;
+}
+
+.styled-btn {
+  background-image: linear-gradient(
+    to right,
+    #314755 0%,
+    #26a0da 51%,
+    #314755 100%
+  );
+  margin: 10px;
+  padding: 0.75em 1.75em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: var(--radius);
+  display: block;
+  border-color: transparent;
+  margin: 1.5rem auto 0 auto;
+  cursor: pointer;
+  letter-spacing: var(--spacing);
+}
+
+.styled-btn:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.loading-container {
+  height: 3.6rem;
+  display: grid;
+  place-items: center;
+  margin-bottom: 2rem;
+  /* border: 2px solid red; */
 }
 
 @media screen and (min-width: 800px) {
@@ -239,5 +283,35 @@ p {
   }
   .icon {
     font-size: 2rem;
+  }
+  .loading-container {
+    height: 4.5rem;
+  }
+}
+
+.loader {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto;
+  position: relative;
+  color: var(--clr-grey-4);
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite alternate;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: -38px -12px, -14px 0, 14px 0, 38px 0;
+  }
+  33% {
+    box-shadow: -38px 0px, -14px -12px, 14px 0, 38px 0;
+  }
+  66% {
+    box-shadow: -38px 0px, -14px 0, 14px -12px, 38px 0;
+  }
+  100% {
+    box-shadow: -38px 0, -14px 0, 14px 0, 38px -12px;
   }
 }
