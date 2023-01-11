@@ -105,8 +105,6 @@ function App() {
 
   const { data: person, isLoading, refetch, isRefetching } = queryObj;
 
-  console.log({ person, isLoading });
-
   function handleContainerClick(e: React.MouseEvent<HTMLDivElement>): void {
     const targetEle = e.target as HTMLElement;
     const iconClickedEle = targetEle.closest('.icon') as HTMLButtonElement;
